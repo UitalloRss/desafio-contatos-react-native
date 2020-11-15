@@ -3,10 +3,11 @@ import {View, StyleSheet} from 'react-native';
 import PeopleListItem from "./PeopleListItem"
 
 const PeopleList = props =>{
-    const {peoples, onPressItem} = props
-    const items = peoples.map(people =>{
+    const {people, onPressItem} = props
+    const items = people.map(people =>{
         return(
-            <PeopleListItem key={people.name.first}
+            <PeopleListItem 
+            key={people.name.first}
             people={people}
             onPressItemDetails={onPressItem} />
         )

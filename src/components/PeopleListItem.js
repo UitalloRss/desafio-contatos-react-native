@@ -3,15 +3,15 @@ import {View, StyleSheet, Image, Text, TouchableOpacity} from 'react-native';
 
 const PeopleListItem = props => {
     const {people, onPressItemDetails} = props;
-    const{title, first, last} = people.name
+    const{first, last} = people.name
     return(
         <TouchableOpacity onPress={() =>{
-            onPressItemDetails()
+            onPressItemDetails(people)
         }}>
         <View style={style.line}>
             <Image style={style.avatar} source={{uri: people.picture.thumbnail}} />
             <Text style={style.texto} key={first}>
-                {` ${title} ${first} ${last}`}
+                {`${first} ${last}`}
             </Text>
         </View>
         </TouchableOpacity>

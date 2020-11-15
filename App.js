@@ -13,10 +13,10 @@ function App(){
   return(
     <View style={style.container}>
         <NavigationContainer>
-          <Drawer.Navigator initialRouteName="PeoplePage" >
-            <Drawer.Screen name ="Lista de Pessoas" component={PeoplePage} />
-            <Drawer.Screen name ="Detalhes da Pessoa" component={PeopleDetailsPage} />
-          </Drawer.Navigator>
+          <Stack.Navigator initialRouteName="PeoplePage" >
+            <Stack.Screen name ="Lista de Pessoas" component={PeoplePage} />
+            <Stack.Screen name ="Detalhes da Pessoa" component={PeopleDetailsPage} />
+          </Stack.Navigator>
         </NavigationContainer>
     </View>
   )
